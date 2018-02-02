@@ -1,0 +1,72 @@
+%container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+%container-flexDop {
+   height: 6vw;
+   align-items: center;
+ }
+html {
+  body {
+    overflow-x: hidden;
+    .container {
+      width: calc(100% - 15vw - 15vw);
+      margin: auto;
+      height: auto;
+    }
+    .navigation {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      background-color: #4F4F4F;
+      height: 6vw;
+      .container-flex {
+        @extend %container-flex;
+        @extend %container-flexDop;
+        .logo {
+          a {
+            text-decoration: none;
+            font-family: 'Tangerine', cursive;
+            font-size: 3vw;
+            letter-spacing: 0.2em;
+            color: #DCDCDC;
+            font-weight: 600;
+            vertical-align: middle;
+          }
+          a:hover {
+            color: #9C9C9C;
+          }
+        }
+        .topMenu {
+          p, a {
+            font-family: 'Playfair Display', serif;
+            display: inline-block;
+            margin-right: 14px;
+            font-size: 1.4vw;
+            text-decoration: none;
+            color: #DCDCDC;
+          }
+          a:last-child {
+            margin-right: 0;
+          }
+          a:hover {
+            color: #9C9C9C;
+          }
+        }
+        .logoOfSocialNetwork {
+          a {
+            color: #DCDCDC;
+            i {
+              font-size: 2vw;
+            }
+          }
+          a:hover {
+            color: #9C9C9C;
+          }
+        }
+      }
+    }
+  }
+}

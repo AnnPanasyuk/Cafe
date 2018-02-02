@@ -1,0 +1,209 @@
+%dateForText {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-weight: 900;
+}
+html {
+  body {
+    background-color: #F5F5F5;
+    .artOfCakes {
+      height: auto;
+      width: 100%;
+      margin: 3vw 0 3vw;
+      .container-flex {
+        @extend %container-flex;
+        .chefCook {
+          width: calc(100% / 2);
+          //border: 2px solid green;
+          .row {
+            padding: 0 3vw;
+            h2 {
+              @extend %dateForText;
+              letter-spacing: 0.1em;
+              font-size: 3.2vw;
+              color: #363636;
+              margin: 0 0 1.4vw 0;
+              @media (min-width: 299px) and (max-width: 599px) {
+                font-size: 6vw;
+              }
+            }
+            .firstPOfChefCookBox {
+              @extend %dateForText;
+              color: #8B4513;
+              font-size: 1.2vw;
+              margin: 0 0 4.8vw 0;
+              @media (min-width: 299px) and (max-width: 599px) {
+                font-size: 3vw;
+              }
+            }
+            p {
+              @extend %dateForText;
+              font-size: 1.6vw;
+              letter-spacing: 0.1em;
+              color: #4F4F4F;
+              margin: 0 0 4.5vw 0;
+              @media (min-width: 299px) and (max-width: 599px) {
+                font-size: 3vw;
+              }
+            }
+            .pForCook {
+              @extend %dateForText;
+              font-size: 2.8vw;
+              color: #363636;
+              letter-spacing: 0.1em;
+              margin: 0 0 4.5vw;
+              @media (min-width: 299px) and (max-width: 599px) {
+                font-size: 4.5vw;
+              }
+            }
+            .container-inline-block {
+              margin: 0 0 2vw;
+              .blockForLastNameOfCook, img, .blockForNameOfCook {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% / 3 - 5px);
+              }
+              .blockForNameOfCook, .blockForLastNameOfCook {
+                p {
+                  vertical-align: middle;
+                  font-family: 'Playfair Display', serif;
+                  letter-spacing: 0.1em;
+                  font-size: 2vw;
+                  color: #363636;
+                  margin: 15px 0;
+                  @media (min-width: 299px) and (max-width: 599px) {
+                    font-size: 4vw;
+                  }
+                }
+              }
+            }
+            .leftQoutes, .blockqt, .rightQoutes {
+              @extend %container-flex;
+            }
+            .leftQoutes {
+              align-items: flex-start;
+              p {
+                transform-origin: center center 1px;
+                transform: rotate(180deg);
+                font-family: 'Tangerine', cursive;
+                font-size: 26px;
+              }
+            }
+            .blockqt {
+              align-items: center;
+              p {
+                color: #8B4513;
+                font-family: 'Tangerine', cursive;
+                font-size: 2.6vw;
+                margin: 0;
+                @media (min-width: 299px) and (max-width: 599px) {
+                  font-size: 4.1vw;
+                }
+              }
+            }
+            .rightQoutes {
+              align-items: flex-end;
+              p {
+                font-family: 'Tangerine', cursive;
+                transform: scale(1, -1);
+                font-size: 26px;
+              }
+            }
+          }
+          @media (min-width: 299px) and (max-width: 549px) {
+            width: 100%;
+          }
+        }
+        .collage {
+          position: relative;
+          width: calc(100% / 2);
+          .back-containerForCollage {
+            @extend %back-container;
+            .flex {
+              height: 100%;
+              @extend %container-flex;
+              align-items: center;
+              margin: 0;
+              .container-flex {
+                position: relative;
+                flex-wrap: wrap;
+                margin: 0;
+                width: 100%;
+                .containerForCollage {
+                  position: relative;
+                  width: calc(100% / 2 - 1.4%);
+                  margin: 0 0 3% 0;
+                  .back-containerForFlour, .back-containerForStrawberry, .back-containerForPastry, .back-containerForCake {
+                    @extend %back-container;
+                  }
+                  .back-containerForFlour {
+                    background: url("../img/flour.png") 100% 100% no-repeat;
+                    background-size: cover;
+                  }
+                  .back-containerForPastry {
+                    background: url("../img/pestry.png") 100% 100% no-repeat;
+                    background-size: cover;
+                  }
+                  .back-containerForCake {
+                    background: url("../img/Cake.png") 100% 100% no-repeat;
+                    background-size: cover;
+                  }
+                  .back-containerForStrawberry {
+                    background: url("../img/strawberry.png") 100% 100% no-repeat;
+                    background-size: cover;
+                  }
+                  &:before {
+                    @extend %forBefore;
+                    padding: 40%;
+                  }
+                }
+                img {
+                  margin: 0 0 3% 0;
+                  width: calc(100% / 2 - 1.4%);
+                  height: calc(100% / 2);
+                }
+                img:nth-child(3), img:nth-child(4) {
+                  margin: 0;
+                }
+                .containerForTasteSoGood {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  width: 100%;
+                  height: 100%;
+                  align-items: center;
+                  .containerForBack {
+                    position: relative;
+                    width: calc(100% / 3);
+                    .back-contain {
+                      @extend %back-container;
+                      background: url("../img/tastes.png") 100% 100% no-repeat;
+                      background-size: contain;
+                    }
+                    &:before {
+                      @extend %forBefore;
+                      padding: 51%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          @media (min-width: 299px) and (max-width: 549px) {
+            width: 100%;
+          }
+          &:before {
+            @extend %forBefore;
+            padding: 50%;
+          }
+        }
+        @media (min-width: 299px) and (max-width: 549px) {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

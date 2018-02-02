@@ -1,0 +1,67 @@
+html {
+  body {
+    .containerForHero {
+      position: relative;
+      width: 100%;
+      .hero {
+        @extend %back-container;
+        background: url("../img/backgroundForHero2.png") no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        h1 {
+          padding: 17% 0 0 0;
+          margin: 0 0 2.5vw 0;
+          font-family: 'Playfair Display', serif;
+          font-size: 5vw;
+          color: #DCDCDC;
+          font-weight: 900;
+          letter-spacing: 0.1em;
+        }
+        hr {
+          width: 10vw;
+          height: 0.1vw;
+          background-color: #DCDCDC;
+          margin: 0 auto 3.5vw;
+        }
+        p {
+          font-size: 3vw;
+          letter-spacing: 0.1em;
+          font-family: 'Playfair Display', serif;
+          color: #DCDCDC;
+          margin: 0 3vw 7vw;
+          @media (min-width: 299px) and (max-width: 599px) {
+            font-weight: 900;
+          }
+        }
+        a {
+          text-decoration: none;
+          span {
+            padding: 1.7vw 3vw;
+            border: 1px dashed #DCDCDC;
+            background-color: #4F4F4F;
+            i {
+              font-family: 'Playfair Display', serif;
+              color: #DCDCDC;
+              font-weight: 900;
+              font-size: 1.35vw;
+              vertical-align: middle;
+              @media (min-width: 299px) and (max-width: 599px) {
+                font-size: 3vw;
+              }
+            }
+          }
+        }
+        span:hover {
+          opacity: 0.9;
+          i {
+            color: #9C9C9C;
+          }
+        }
+      }
+      &:before {
+        @extend %forBefore;
+        padding: 29%;
+      }
+    }
+  }
+}
